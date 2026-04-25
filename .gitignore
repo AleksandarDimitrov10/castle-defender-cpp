@@ -1,0 +1,36 @@
+
+## .gitignore
+
+Use this:
+
+```gitignore
+# Compiled binaries
+*.exe
+*.out
+*.app
+*.o
+*.obj
+
+# Build folders
+build/
+bin/
+debug/
+release/
+
+# CMake files, if added later
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+
+# OS files
+.DS_Store
+Thumbs.db
