@@ -40,19 +40,91 @@ After each wave, the AI can increase enemy health if the player performs well. T
 
 ## Project Structure
 
-```text
 castle-defender-cpp/
-├── src/
-│   ├── main.cpp
-│   ├── Game.cpp / Game.h
-│   ├── Grid.cpp / Grid.h
-│   ├── Tower.cpp / Tower.h
-│   ├── Enemy.cpp / Enemy.h
-│   ├── Castle.cpp / Castle.h
-│   ├── AIController.cpp / AIController.h
-│   └── Types.h
-├── docs/
-│   └── screenshots/
-├── README.md
-├── .gitignore
-└── LICENSE
+- README.md
+- .gitignore
+- LICENSE
+- src/
+  - main.cpp
+  - Game.cpp
+  - Game.h
+  - Grid.cpp
+  - Grid.h
+  - Tower.cpp
+  - Tower.h
+  - Enemy.cpp
+  - Enemy.h
+  - Castle.cpp
+  - Castle.h
+  - AIController.cpp
+  - AIController.h
+  - Types.h
+
+## Main Classes
+
+| Class / File | Purpose |
+|---|---|
+| `Types.h` | Stores grid constants and the `Position` struct |
+| `Tower` | Represents player-placed towers and attack behavior |
+| `Enemy` | Represents enemies, movement, health, and enemy types |
+| `Castle` | Stores castle position and health |
+| `Grid` | Handles text-based battlefield rendering |
+| `AIController` | Controls enemy spawning, waves, and adaptive difficulty |
+| `Game` | Coordinates the main game loop and core gameplay logic |
+| `main.cpp` | Starts the game |
+
+## How to Compile and Run
+
+This project is written in C++ and can be compiled with a standard C++ compiler such as `g++`.
+
+### Compile on Windows with MinGW
+
+g++ src/*.cpp -o castle_defender.exe
+
+Run the game:
+
+castle_defender.exe
+
+### Compile on macOS/Linux
+
+g++ src/*.cpp -o castle_defender
+
+Run the game:
+
+./castle_defender
+
+## My Contribution
+
+This was an individual C++ programming project.
+
+My contribution involved designing and implementing the full text-based tower-defense game, including the battlefield setup, tower placement system, enemy spawning, enemy movement, tower attack logic, scoring system, castle health, win/loss conditions, wave progression, and adaptive AI difficulty.
+
+I structured the project using multiple C++ classes to separate responsibilities between the main game loop, grid rendering, enemies, towers, the castle, and AI behavior. This made the code easier to organize, test, debug, and extend.
+
+The main technical challenges were implementing enemy movement without collisions, keeping the printed battlefield synchronized with the internal game state, making tower range detection work correctly, and designing an adaptive AI system while staying within the course requirements.
+
+## Challenges
+
+The main challenges were implementing enemy movement without collisions, ensuring tower range detection worked correctly, keeping the printed battlefield synchronized with the internal game state, and designing adaptive AI while staying within the course requirements.
+
+Because towers deal limited damage per turn, I also created a controlled test scenario to demonstrate enemy deaths, score increases, wave transitions, and adaptive difficulty changes.
+
+## Future Improvements
+
+Possible future improvements include:
+
+- More tower types
+- More enemy types
+- Improved enemy pathfinding
+- AI that reacts to tower placement
+- Save/load functionality
+- A graphical interface
+
+## Technologies Used
+
+- C++
+- Object-oriented programming
+- Text-based grid rendering
+- Game loop logic
+- Adaptive AI logic
+- Basic real-time strategy / tower-defense mechanics
